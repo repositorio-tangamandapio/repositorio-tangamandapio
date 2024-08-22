@@ -36,11 +36,12 @@ export const Register = () => {
 
   return (
     <main className="register-container">
+      
+      <Form className="register-form" onSubmit={handleSubmit}>
       <div className="register-header">
         <h2 className="register-title">Registro</h2>
         <span>Complete los datos para crear un usuario</span>
       </div>
-      <Form className="register-form" onSubmit={handleSubmit}>
         <FloatingLabel controlId="nombre" label="Nombre" className="mb-3">
           <Form.Control
             type="text"

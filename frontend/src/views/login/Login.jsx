@@ -4,6 +4,7 @@ import { UserContext } from "../../context/UserContext";
 import { userType } from "../../context/userTypes";
 import { Link } from "react-router-dom";
 import "./login.css";
+import { navbar } from "../templates/navbar";
 
 export const Login = () => {
   const { stateDispatch } = useContext(UserContext);
@@ -47,12 +48,14 @@ export const Login = () => {
   };
 
   return (
+    <>
     <main className="login-container">
+      
+      <Form className="login-form" onSubmit={handleSubmit}>
       <div className="login-header">
         <h2 className="login-title">Login</h2>
         <span></span>
       </div>
-      <Form className="login-form" onSubmit={handleSubmit}>
         <FloatingLabel
           controlId="usuario"
           label="Nombre de Usuario"
@@ -88,5 +91,6 @@ export const Login = () => {
         </button>
       </Form>
     </main>
+    </>
   );
 };

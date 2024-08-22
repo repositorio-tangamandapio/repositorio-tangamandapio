@@ -1,13 +1,10 @@
 .register-container {
   height: 100vh;
-  background-image: url("/img/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: none;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }
 
 .register-header {
@@ -15,49 +12,54 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #ffff;
+  color: #FFF; /* Blanco */
   margin-bottom: 20px;
 }
 
 .register-header h2 {
   font-weight: 700;
+  color: #1A5319; 
 }
 
 .register-form {
   display: flex;
   flex-direction: column;
-  background-color: transparent;
+  background-color: rgba(128, 175, 129, 0.8); 
   border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 .register-form input {
-  background-color: transparent;
+  background-color: #FFF; /* Blanco */
   width: 300px;
-  color: #fff;
+  color: #1A5319; /* Verde más oscuro */
+  border: 1px solid #508D4E; /* Verde oscuro */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .register-form label {
-  color: #fff !important;
+  color: #1A5319 !important; /* Verde más oscuro */
+  margin-bottom: 5px;
 }
 
 .register-form input:focus {
-  background-color: transparent;
-  color: #fff;
-}
-
-.register-form label::after {
-  background-color: transparent !important;
-  color: #fff !important;
+  background-color: #FFF; /* Blanco */
+  color: #1A5319; /* Verde más oscuro */
+  border: 1px solid #80AF81; /* Verde medio */
 }
 
 .button-register {
-  background-color: #0f2466;
-  border: 1px solid #2b3b6d;
-  color: #ffffff;
+  background-color: #1A5319; /* Verde más oscuro */
+  border: 1px solid #508D4E; /* Verde oscuro */
+  color: #FFF; /* Blanco */
   padding: 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .button-register:hover {
-  background-color: #011453;
+  background-color: #508D4E; /* Verde oscuro */
 }
