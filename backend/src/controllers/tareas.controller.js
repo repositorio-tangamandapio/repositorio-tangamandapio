@@ -6,7 +6,6 @@ export const obtenerProductos = async (req, res) => {
   client.connect();
   const lista = client.db("agrofsa").collection("Productos").find({});
   const productos = await lista.toArray();
-  console.log(productos);
   res.json(productos);
 };
 
