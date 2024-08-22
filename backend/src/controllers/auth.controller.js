@@ -1,4 +1,3 @@
-import { connectDB } from "../db/database.js";
 import bcrypt from "bcrypt";
 import { generarJWT } from "../helpers/generarJWT.js";
 
