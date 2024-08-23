@@ -15,20 +15,18 @@ export const renderProducts = (product) => {
   $productTitle.textContent = product.Nombre;
   $productInfo.appendChild($productTitle);
 
-  const $btcContainer = document.createElement("div");
-  $btcContainer.classList.add("btc");
-  $productInfo.appendChild($btcContainer);
-
-  const $precioProduct = document.createElement("p");
-  $precioProduct.textContent = "Último precio";
-  $btcContainer.appendChild($precioProduct);
+  const $bidContainer = document.createElement("div");
+  $bidContainer.classList.add("bid");
+  $productInfo.appendChild($bidContainer);
 
   const $bidA = document.createElement("a");
-  $bidA.href = "#";
+
   $bidA.classList.add("btn-view");
   $bidA.textContent = "Ver";
   $bidA.href = `/comprar?${product.Nombre}`;
-  $productContainer.appendChild($bidA);
+
+  $bidContainer.appendChild($bidA);
+  $productContainer.appendChild($bidContainer);
 
   return $productContainer;
 };
