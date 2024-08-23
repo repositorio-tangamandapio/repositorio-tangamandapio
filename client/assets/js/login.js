@@ -1,8 +1,18 @@
 import { API_URL } from "./constants.js";
 const container = document.getElementById("container");
 const registerBtn = document.getElementById("register");
-const loginBtn = document.getElementById("btnLogin");
+const loginBtn = document.getElementById("loginc");
 const register = document.getElementById("registrar");
+const Btnlogin = document.getElementById("Btnlogin");
+
+registerBtn.addEventListener('click', () => {
+  container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+  container.classList.remove("active");
+});
+
 
 register.addEventListener("click", () => {
   const nombre = document.querySelector("#iN").value;
@@ -30,7 +40,7 @@ register.addEventListener("click", () => {
     });
 });
 
-loginBtn.addEventListener("click", () => {
+Btnlogin.addEventListener("click", () => {
   const dni = document.querySelector("#iDL").value;
   const contrasenia = document.querySelector("#iPL").value;
   const hashContrasenia = "lol";
