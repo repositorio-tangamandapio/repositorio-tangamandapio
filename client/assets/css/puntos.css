@@ -1,0 +1,31 @@
+.list-group-item {
+    padding: 20px 30px;
+    margin-top: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    background-color: #b5c18e;
+    display: flex;
+    align-items: center; 
+  }
+
+  .list-group-item i {
+    font-size: 2rem; 
+    margin-right: 20px; 
+    flex-shrink: 0; 
+  }
+
+  .list-group-item div {
+    flex: 1; 
+  }
+
+  .list-group-item h5 {
+    margin-bottom: 5px; 
+  }
+
+  .list-group-item p {
+    margin: 0; 
+  }
+  main{
+    height: 100vh;
+  } 
