@@ -9,7 +9,7 @@ const productosRouter = Router();
 
 productosRouter.get("/productos", obtenerProductos);
 
-productosRouter.get("/productos/:prod", obtenerProducto);
+productosRouter.post("/productos/:prod", obtenerProducto);
 
 // tareasRouter.post("/tareas", crearTarea);
 

@@ -1,13 +1,26 @@
-import { getAllProducts } from "./services";
+import { getAllProducts, getProduct, getSellers } from "./services";
+import { renderSellers } from "./sellers";
 import { renderProducts } from "./products";
 
 const $productList = document.querySelector("#product-list");
-const $farmerList = document.querySelector("#farmer-list");
+const $sellerList = document.querySelector("#seller-list");
+const $productTitle = document.querySelector("#productTitle");
+
+if ($productTitle) {
+  getProduct().then((info) => ($productTitle.textContent = info.Nombre));
+}
 if ($productList) {
-  console.log("hay producto");
   getAllProducts().then((products) => {
     products.forEach((product) => {
       $productList.appendChild(renderProducts(product));
+    });
+  });
+}
+if ($sellerList) {
+  console.log("hay vendedor");
+  getSellers().then((seller) => {
+    seller.forEach((seller) => {
+      $sellerList.appendChild(renderSellers(seller));
     });
   });
 }

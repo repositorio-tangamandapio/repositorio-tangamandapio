@@ -10,17 +10,17 @@ export const obtenerProductos = async (req, res) => {
 };
 
 export const obtenerProducto = async (req, res) => {
-  const { id } = req.params;
+  const { prod } = req.params;
+  console.log(prod);
   client.connect();
-  if (ObjectId.isValid(id)) {
-    const o_id = ObjectId.createFromHexString(id);
-    const lista = client
-      .db("agrofsa")
-      .collection("Productos")
-      .findOne({ _id: o_id });
-    const producto = await lista;
-    res.send(producto);
+  const lista = client
+    .db("agrofsa")
+    .collection("Productos")
+    .findOne({ Nombre: prod });
+  const producto = await lista;
+  if (!lista) {
+    res.send("No se encontró el elemento").status(400);
   } else {
-    res.send("No es posible encontrar el producto").status(400);
+    res.send(producto);
   }
 };
