@@ -58,3 +58,9 @@ export const login = async (req, res) => {
     token,
   });
 };
+export const getAll = async (req, res) => {
+  client.connect();
+  const lista = client.db("agrofsa").collection("Usuarios").find({});
+  const vendedores = await lista.toArray();
+  res.json(vendedores);
+};
