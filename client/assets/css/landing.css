@@ -17,7 +17,7 @@ img{
 }
 
 body{
-    background-color: #fff;
+    background-color: #FFF;
 }
 
 nav{
@@ -124,7 +124,7 @@ h2.separator{
     padding: 20px;
     background: #fff;
     border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -173,7 +173,7 @@ h2.separator{
 
 .nft-shop .category a:hover{
     color: #fff;
-    background-color: #0f2182;
+    background-color: #399918;
 }
 
 .nft-shop .nft-list{
@@ -210,12 +210,12 @@ h2.separator{
 
 .nft-shop .nft-list .item .btc i{
     font-size: 22px;
-    color: #304ffe;
+    color: #399918;
 }
 
 .nft-shop .nft-list .item .btc p{
     font-size: 12px;
-    color: #304ffe;
+    color: #399918;
 }
 
 .nft-shop .nft-list .item .info > p{
@@ -234,12 +234,12 @@ h2.separator{
 .nft-shop .nft-list .item .bid a{
     background-color: #edecec;
     padding: 6px 10px;
-    font-size: 13px;
+    font-size: 16px;
     border-radius: 10px;
 }
 
 .nft-shop .nft-list .item .bid a{
-    color: #000;
+    color: #399918;;
     background: transparent;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -268,7 +268,7 @@ h2.separator{
 
 .view-more button:hover{
     color: #fff;
-    background: #0f2182;
+    background: #399918;
 }
 
 .sellers{
@@ -289,6 +289,7 @@ h2.separator{
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    
 }
 
 .sellers .item img{
