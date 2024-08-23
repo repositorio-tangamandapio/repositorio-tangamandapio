@@ -1,5 +1,4 @@
 import jwt from "jsonwebtoken";
-import { connectDB } from "../db/database.js";
 
 export const validarJWT = async (token) => {
   try {

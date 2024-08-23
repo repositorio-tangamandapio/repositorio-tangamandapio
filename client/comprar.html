@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Farmers</title>
+    <title>Comprar</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="./assets/css/landing.css" />
 
     <style>
-       #create-form {
-      display: none;
+      #create-form {
+        display: none;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -39,7 +39,6 @@
         max-height: 80%;
         overflow-y: auto;
         border-radius: 8px;
-
       }
       #overlay {
         display: none;
@@ -51,22 +50,25 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: 500;
       }
-      .btnEnviar{
-      background-color: #B5C18E;
-      color: #FFF;
-      border-radius: 5px;
-      border: none;
-      
+      .btnEnviar {
+        background-color: #b5c18e;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+      }
+      main {
+        height: 100vh;
       }
     </style>
   </head>
 
   <body>
     <nav>
-      <a href="#" class="logo justify-conten-center">AgroFsa</a>
+      <a href="#" class="logo justify-content-center">AgroFsa</a>
       <div class="links">
-        <a href="">Productos</a>
-        <a href="">Puntos de compra</a>
+        <a href="products.html">Productos</a>
+        <a href="puntos.html">Puntos de compra</a>
+        <a href="rol.html">Ser vendedor</a>
       </div>
       <div class="login">
         <button class="signup">Cerrar sesión</button>
@@ -74,10 +76,16 @@
     </nav>
 
     <main>
+      <div class="card text-center">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <h4 class="card-title" id="productTitle"></h4>
+          <p class="card-text" id="desc"></p>
+        </div>
+      </div>
+
       <!-- Contenedor para centrar el botón -->
-      <div
-        class="d-flex justify-content-center align-items-center"
-      >
+      <div class="d-flex justify-content-center align-items-center">
         <button id="toggle-form" class="btn btn-success mb-2">Crear</button>
       </div>
 
@@ -87,67 +95,29 @@
       <div id="create-form">
         <form>
           <div class="mb-3">
-            <label for="name" class="form-label">Nombre</label>
+            <label for="name" class="form-label">Cantidad</label>
             <input
-              type="text"
+              type="tt"
               class="form-control"
-              id="name"
-              placeholder="Nombre y Apellido"
+              id="precio"
+              placeholder="3kg"
             />
           </div>
           <div class="mb-3">
-            <label for="location" class="form-label">Ubicación</label>
-            <input
-              type="text"
-              class="form-control"
-              id="location"
-              placeholder="Ciudad, Provincia"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="price" class="form-label">Precio</label>
+            <label for="" class="form-label">Precio</label>
             <input
               type="number"
               class="form-control"
-              id="price"
-              placeholder="Precio"
+              id=""
+              placeholder="5000"
             />
           </div>
           <button type="submit" class="btn btnEnviar">Enviar</button>
-          <button type="button" id="close-form" class="btn btnEnviar">
-            Cerrar
-          </button>
         </form>
       </div>
 
-      <div class="container my-5" id="farmer-list">
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card shadow-lg border-0 rounded-4">
-              <img
-                src="https://images.pexels.com/photos/1352199/pexels-photo-1352199.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                class="card-img-top rounded-top-4"
-                alt="Imagen del cultivo"
-              />
-              <div class="card-body">
-                <h5 class="card-title text-center fw-bold">
-                  Nombre del Productor 1
-                </h5>
-                <p class="card-text text-muted text-center mb-1">
-                  <i class="bi bi-geo-alt-fill"></i> Ubicación: Ciudad,
-                  Provincia
-                </p>
-                <div
-                  class="d-flex justify-content-center align-items-center mb-3"
-                >
-                  <i class="bi bi-tags-fill text-success me-1"></i>
-                  <span class="fw-bold">$5000</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="container my-5" id="seller-list">
+        <div class="row g-4"></div>
       </div>
     </main>
 
@@ -196,5 +166,6 @@
         overlay.style.display = "none";
       });
     </script>
+    <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>
