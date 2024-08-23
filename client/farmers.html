@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Famers</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -33,11 +33,11 @@
         <a href="">Nosotros</a>
       </div>
       <div class="login">
-        <button class="signup">Comienza ahora</button>
+        <button class="signup">Cerrar sesión</button>
       </div>
     </nav>
     <main>
-        <div class="container my-5">
+        <div class="container my-5" id="farmer-list">
           <div class="row g-4">
             <!-- Card 1 -->
             <div class="col-12 col-sm-6 col-lg-4">
@@ -48,12 +48,16 @@
                   <p class="card-text text-muted text-center mb-1">
                     <i class="bi bi-geo-alt-fill"></i> Ubicación: Ciudad, Provincia
                   </p>
-                  <p class="card-text text-muted text-center">
-                    <i class="bi bi-box-seam"></i> Cantidad: X kilo(s)/docena(s)
-                  </p>
+                  <div class="d-flex justify-content-center align-items-center mb-3">
+                    <i class="bi bi-tags-fill text-success me-1"></i>
+                    <span class="fw-bold">$5000</span>
+                  </div>
                 </div>
               </div>
             </div>
+            
+            
+              
             
           </div>
         </div>
@@ -67,15 +71,10 @@
           <a href="#" clas="text-white">Contactarnos</a>
           <a href="#" clas="text-white">Politicas de Privacidad</a>
         </div>
-        <div class="social">
-          <i class="bx bxl-instagram"></i>
-          <i class="bx bxl-facebook-square"></i>
-          <i class="bx bxl-github"></i>
-        </div>
         <p>Copyright © 2024 All Rights Reserved.</p>
       </div>
     </footer>
-    <script src="./assets/js/main.js"></script>
+   
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -88,5 +87,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
