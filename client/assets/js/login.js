@@ -4,7 +4,7 @@ const registerBtn = document.getElementById("register");
 const loginBtn = document.getElementById("btnLogin");
 const register = document.getElementById("registrar");
 
-register.addEventListener("click", () => {
+register.addEventListener("click", async () => {
   const nombre = document.querySelector("#iN").value;
   const apellido = document.querySelector("#iA").value;
   const dni = document.querySelector("#iD").value;
@@ -16,7 +16,7 @@ register.addEventListener("click", () => {
     contrasenia,
   };
   console.log(info);
-  return fetch(API_URL + "/register", {
+  const peticion = await fetch(API_URL + "/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -28,9 +28,12 @@ register.addEventListener("click", () => {
       console.error("Error al realizar el login:", error);
       throw error;
     });
+  if (peticion.msg == "Registrado correctamente") {
+    window.location.reload();
+  }
 });
 
-loginBtn.addEventListener("click", () => {
+loginBtn.addEventListener("click", async (req, res) => {
   const dni = document.querySelector("#iDL").value;
   const contrasenia = document.querySelector("#iPL").value;
   const hashContrasenia = "lol";
@@ -41,18 +44,18 @@ loginBtn.addEventListener("click", () => {
     hashContrasenia,
   };
   console.log(info);
-  return fetch(API_URL + "/login", {
+  const peticion = await fetch(API_URL + "/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(info),
-  })
-    .then((response) => response.json())
-    .catch((error) => {
-      console.error("Error al realizar el login:", error);
-      throw error;
-    });
+  }).then((response) => response.json());
+  console.log(peticion.msg);
+  localStorage.setItem("token", `${peticion.token}`);
+  if (peticion.msg == "Inicio de sesión exitoso") {
+    window.location.href = "./products";
+  }
 });
 
 registerBtn.addEventListener("click", () => {

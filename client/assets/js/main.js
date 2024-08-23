@@ -1,13 +1,15 @@
 import { getAllProducts, getProduct, getSellers } from "./services";
 import { renderSellers } from "./sellers";
 import { renderProducts } from "./products";
-import { loginUsuario } from "./login";
 const $productList = document.querySelector("#product-list");
 const $sellerList = document.querySelector("#seller-list");
 const $productTitle = document.querySelector("#productTitle");
 
 if ($productTitle) {
   getProduct().then((info) => ($productTitle.textContent = info.Nombre));
+  getProduct().then(
+    (info) => (document.querySelector("#Precio").textContent = info.precioVenta)
+  );
 }
 if ($productList) {
   getAllProducts().then((products) => {
@@ -23,6 +25,21 @@ if ($sellerList) {
     });
   });
 }
+
+// document.querySelector(".btnEnviar").addEventListener("click", () => {
+//   const precio = document.querySelector("#precio").value;
+//   const cantidad = document.querySelector("#cantidad").value;
+//   const info = {
+//     precio,
+//     cantidad,
+//   };
+//   enviarOrden(info);
+// });
+document.querySelector("#logout").addEventListener("click", () => {
+  console.log("hola");
+  window.localStorage.removeItem("token");
+  window.location.href = "./landing";
+});
 // getAllFarmers().then((farmers) => {
 //   farmers.forEach((farmer) => {
 //     $farmerList.appendChild(renderFarmers(farmer));

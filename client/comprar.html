@@ -61,13 +61,13 @@
 
   <body>
     <nav>
-      <a href="#" class="logo justify-content-center">AgroFsa</a>
+      <a href="./landing.html" class="logo justify-content-center">AgroFsa</a>
       <div class="links">
         <a href="products.html">Productos</a>
         <a href="puntos.html">Puntos de compra</a>
       </div>
       <div class="login">
-        <button class="signup">Cerrar sesión</button>
+        <button class="signup" id="logout">Cerrar sesión</button>
       </div>
     </nav>
 
@@ -76,7 +76,7 @@
         <div class="card-header"></div>
         <div class="card-body">
           <h4 class="card-title" id="productTitle"></h4>
-          <p class="card-text" id="desc"></p>
+          <p class="card-text" id="Precio">-</p>
         </div>
       </div>
 
@@ -95,7 +95,7 @@
             <input
               type="tt"
               class="form-control"
-              id="precio"
+              id="cantidad"
               placeholder="3kg"
             />
           </div>
@@ -104,7 +104,7 @@
             <input
               type="number"
               class="form-control"
-              id=""
+              id="precio"
               placeholder="5000"
             />
           </div>

@@ -18,5 +18,8 @@
     "mongodb": "^6.8.0",
     "morgan": "^1.10.0",
     "mysql2": "^3.10.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1"
   }
 }

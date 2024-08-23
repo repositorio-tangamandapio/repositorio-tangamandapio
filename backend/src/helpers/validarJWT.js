@@ -1,28 +1,27 @@
 import jwt from "jsonwebtoken";
-
+import { cliente } from "../db/database.js";
+import { ObjectId } from "mongodb";
+const client = cliente();
 export const validarJWT = async (token) => {
   try {
     // Usamos el metodo verify para verificar el token.
     // El primer parametro es el token que recibimos por el header, y el segun el secret con el que firmamos el token.
     const { id } = jwt.verify(token, "mysecret");
-
-    const connection = await connectDB();
-
-    // Buscamos el usuario por id.
-    const [usuario] = await connection.query(
-      "SELECT * FROM USUARIOS WHERE id=? LIMIT 1",
-      id
-    );
+    if (ObjectId.isValid(id)) {
+      const o_id = ObjectId.createFromHexString(id);
+    }
+    const usuario = client
+      .db("agrofsa")
+      .collection("Usuarios")
+      .findOne({ _id: o_id });
 
     // En caso de que no exista retornamos false.
     if (!usuario) {
       return false;
     } else {
-      //Caso contrario retornamos el usuario.
-      return usuario[0];
+      return usuario;
     }
   } catch (error) {
-    // Si ocurre un error lo mostramos por consola y retornamos false.
     console.log(error);
     return false;
   }
