@@ -29,7 +29,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #fff;
+        background-color: #b5c18e;
         padding: 40px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         z-index: 1000;
@@ -39,6 +39,7 @@
         max-height: 80%;
         overflow-y: auto;
         border-radius: 8px;
+        color: #fff;
       }
       #overlay {
         display: none;
@@ -51,8 +52,8 @@
         z-index: 500;
       }
       .btnEnviar {
-        background-color: #b5c18e;
-        color: #fff;
+        background-color: #fff;
+        color: #00712d;
         border-radius: 5px;
         border: none;
       }
@@ -68,7 +69,6 @@
       <div class="links">
         <a href="products.html">Productos</a>
         <a href="puntos.html">Puntos de compra</a>
-        <a href="rol.html">Ser vendedor</a>
       </div>
       <div class="login">
         <button class="signup">Cerrar sesión</button>
@@ -76,48 +76,43 @@
     </nav>
 
     <main>
-      <div class="card text-center">
-        <div class="card-header"></div>
-        <div class="card-body">
-          <h4 class="card-title" id="productTitle"></h4>
-          <p class="card-text" id="desc"></p>
-        </div>
-      </div>
-
       <!-- Contenedor para centrar el botón -->
       <div class="d-flex justify-content-center align-items-center">
         <button id="toggle-form" class="btn btn-success mb-2">Crear</button>
       </div>
 
-      <div id="overlay"></div>
-
       <!-- Formulario oculto -->
       <div id="create-form">
         <form>
           <div class="mb-3">
-            <label for="name" class="form-label">Cantidad</label>
+            <label for="" class="form-label">Telefono</label>
             <input
-              type="tt"
+              type="text"
               class="form-control"
-              id="precio"
+              id="telefono"
               placeholder="3kg"
             />
           </div>
           <div class="mb-3">
-            <label for="" class="form-label">Precio</label>
+            <label for="" class="form-label">Gmail</label>
             <input
-              type="number"
+              type="email"
               class="form-control"
-              id=""
+              id="email"
+              placeholder="5000"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Domicilio</label>
+            <input
+              type="text"
+              class="form-control"
+              id="domocilio"
               placeholder="5000"
             />
           </div>
           <button type="submit" class="btn btnEnviar">Enviar</button>
         </form>
-      </div>
-
-      <div class="container my-5" id="seller-list">
-        <div class="row g-4"></div>
       </div>
     </main>
 
