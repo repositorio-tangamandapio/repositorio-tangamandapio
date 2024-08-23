@@ -1,7 +1,7 @@
 import { getAllProducts, getProduct, getSellers } from "./services";
 import { renderSellers } from "./sellers";
 import { renderProducts } from "./products";
-
+import { loginUsuario } from "./login";
 const $productList = document.querySelector("#product-list");
 const $sellerList = document.querySelector("#seller-list");
 const $productTitle = document.querySelector("#productTitle");
@@ -23,7 +23,6 @@ if ($sellerList) {
     });
   });
 }
-
 // getAllFarmers().then((farmers) => {
 //   farmers.forEach((farmer) => {
 //     $farmerList.appendChild(renderFarmers(farmer));
