@@ -4,6 +4,10 @@ import { API_URL } from "./constants";
 export const getAllProducts = async () => {
   return fetch(API_URL + "/productos").then((response) => response.json());
 };
+
+export const getAllSellers = async () => {
+  return fetch(API_URL + "/users").then((response) => response.json());
+};
 export const getProduct = async () => {
   const prod = window.location.search;
   return fetch(API_URL + `/productos/${prod.replace("?", "")}`, {
