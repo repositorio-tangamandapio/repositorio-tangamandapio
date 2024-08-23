@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import { userRouter } from "./routes/auth.routes.js";
-import { tareasRouter } from "./routes/tareas.routes.js";
+import { productosRouter } from "./routes/productos.routes.js";
 
 //Inicializamos express.
 const app = express();
@@ -15,7 +15,7 @@ app.use(express.json()); // express.json para que nuestro servidor pueda reconoc
 
 //Requerimos nuestras rutas.
 app.use(userRouter);
-app.use(tareasRouter);
+app.use(productosRouter);
 
 //Configuramos el puerto al que escuchara nuestro servidor.
 app.listen(3000, () => {

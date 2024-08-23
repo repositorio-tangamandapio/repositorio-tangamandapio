@@ -1,15 +1,15 @@
 import {
   obtenerProductos,
   obtenerProducto,
-} from "../controllers/tareas.controller.js";
+} from "../controllers/productos.controller.js";
 
 import { Router } from "express";
 
-const tareasRouter = Router();
+const productosRouter = Router();
 
-tareasRouter.get("/productos", obtenerProductos);
+productosRouter.get("/productos", obtenerProductos);
 
-tareasRouter.get("/productos/:id", obtenerProducto);
+productosRouter.get("/productos/:prod", obtenerProducto);
 
 // tareasRouter.post("/tareas", crearTarea);
 
@@ -17,4 +17,4 @@ tareasRouter.get("/productos/:id", obtenerProducto);
 
 // tareasRouter.delete("/tareas/:id", eliminarTarea);
 
-export { tareasRouter };
+export { productosRouter };
