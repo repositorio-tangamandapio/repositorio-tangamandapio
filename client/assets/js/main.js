@@ -17,7 +17,6 @@ if ($productList) {
   });
 }
 if ($sellerList) {
-  console.log("hay vendedor");
   getSellers().then((seller) => {
     seller.forEach((seller) => {
       $sellerList.appendChild(renderSellers(seller));
