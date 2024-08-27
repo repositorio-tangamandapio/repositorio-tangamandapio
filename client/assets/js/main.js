@@ -5,12 +5,18 @@ const $productList = document.querySelector("#product-list");
 const $sellerList = document.querySelector("#seller-list");
 const $productTitle = document.querySelector("#productTitle");
 
+//Página de productos
 if ($productTitle) {
   getProduct().then((info) => ($productTitle.textContent = info.Nombre));
+  getProduct().then((info) =>
+    document.querySelector("#cPhoto").setAttribute("src", `${info.img}`)
+  );
   getProduct().then(
     (info) => (document.querySelector("#Precio").textContent = info.precioVenta)
   );
 }
+
+//Landing
 if ($productList) {
   getAllProducts().then((products) => {
     products.forEach((product) => {
@@ -18,6 +24,8 @@ if ($productList) {
     });
   });
 }
+
+//Página del producto individual
 if ($sellerList) {
   getSellers().then((seller) => {
     seller.forEach((seller) => {
